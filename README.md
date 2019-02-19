@@ -2,5 +2,5 @@
 
 1. Log into my git account
 2. Click "Create a new Repository" -> enter a Repository name -> select "Public" and "Initialize this repository with a README" -> Click "Create repository"
-3. Click "Upload Files" -> Drag img folder, js folder, and index.html file into upload area -> Click "Commit change" -> wait for uploading
-4. Click "Create new file" -> folder name enter "css" -> next folder name enter "lib" -> create
+3. Click "Upload Files" -> Drag my project folder into upload area -> Click "Commit change" -> wait for uploading
+
