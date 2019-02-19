@@ -1,0 +1,195 @@
+<!--
+Mobile web development
+Assignment1 for Mobile page development
+Created by: Zixuan Yang
+email:      riona2626@gmail.com
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>ZY Feedback A1</title>
+    <!--jQuery-->
+    <script src="js/lib/jquery-2.1.4.js"></script>
+    <!--jQuery Mobile-->
+    <script src="js/lib/jquery.mobile-1.4.5.js"></script>
+    <!--jQuery Validator-->
+    <script src="js/lib/jquery.validate.js"></script>
+
+    <!--jQuery Mobile stylesheet-->
+    <link rel="stylesheet" type="text/css" href="css/lib/jquery.mobile-1.4.5.css">
+</head>
+
+<body>
+
+<!--This is home page-->
+<div id="zyHomePage" data-role="page">
+    <header data-role="header" data-theme="b" data-position="fixed">
+        <h1>zy Feedback A1</h1>
+        <div data-role="navbar" data-iconpos="top">
+            <ul>
+                <li><a href="#zyHomePage" data-icon="home" data-theme="a" class="ui-btn-active ui-state-persist">Home</a></li>
+                <li><a href="#zyAddFeedbackPage" data-icon="plus" data-theme="a">Add</a></li>
+                <li><a href="#zyViewFeedbackPage" data-icon="grid" data-theme="a">Reviews</a></li>
+                <li><a href="#zySettingsPage" data-icon="gear" data-theme="a">Settings</a></li>
+            </ul>
+        </div>
+    </header>
+    <section data-role="content">
+        <h2>Zixuan Yang's Feedback A1 App</h2>
+        <p>Welcome to the Zixuan Yang's Feedback A1 app. A prototype designed for mobile programming class. This is
+            the first iteration of the app to keep track of different places you visited along with your reviews.</p>
+        <p align="center">
+            <img src="img/zy-icon.png"  width="100%" height="100%">
+        </p>
+        <p>Please feel free to contact me if you have any suggestions!</p>
+        <a href="#" data-role="button" data-icon="plus">Call : 778.859.7527</a>
+        <a href="#" data-role="button" data-icon="plus">riona2626@gmail.com</a>
+        <p>Website:</p>
+        <a href="http://www.conestogac.on.ca/" data-role="button" data-icon="plus">Conestoga College</a>
+    </section>
+    <footer data-role="footer" data-theme="b" data-position="fixed">
+        <h1>&copy; 2019 Zixuan Yang</h1>
+    </footer>
+</div>
+
+<!--This is add feedback page-->
+<div id="zyAddFeedbackPage" data-role="page">
+    <header data-role="header" data-theme="b" data-position="fixed">
+        <h1>Add a Feedback</h1>
+        <div data-role="navbar" data-iconpos="top">
+            <ul>
+                <li><a href="#zyHomePage" data-icon="home" data-theme="a">Home</a></li>
+                <li><a href="#zyAddFeedbackPage" data-icon="plus" data-theme="a"  class="ui-btn-active ui-state-persist">Add</a></li>
+                <li><a href="#zyViewFeedbackPage" data-icon="grid" data-theme="a">Reviews</a></li>
+                <li><a href="#zySettingsPage" data-icon="gear" data-theme="a">Settings</a></li>
+            </ul>
+        </div>
+    </header>
+    <section data-role="content">
+        <form id="zyAddForm" name="zyAddForm">
+            <label for="zyTxtBusinessName">Business Name:</label>
+            <input type="text" id="zyTxtBusinessName" name="zyTxtBusinessName">
+
+            <label for="zyTxtEmail">Reviewer Email:</label>
+            <input type="text" id="zyTxtEmail" name="zyTxtEmail">
+
+            <label for="zyTxtAreaComments">Reviewer Comments</label>
+            <textarea name="zyTxtAreaComments" id="zyTxtAreaComments"></textarea>
+            <label for="zyNumberRate">Overall Ratings(1-100):</label>
+            <input type="number" id="zyNumberRate" name="zyNumberRate" min="1" max="100">
+            <button type="button" id="zyBtnSave" data-inline="true" style="color: white; background-color:blue">Save</button>
+        </form>
+    </section>
+    <footer data-role="footer" data-theme="b" data-position="fixed">
+        <h1>&copy; 2019 Zixuan Yang</h1>
+    </footer>
+</div>
+
+<!--This is view feedback page-->
+<div id="zyViewFeedbackPage" data-role="page">
+    <header data-role="header" data-theme="b" data-position="fixed">
+        <h1>List of Reviews</h1>
+        <div data-role="navbar" data-iconpos="top">
+            <ul>
+                <li><a href="#zyHomePage" data-icon="home" data-theme="a">Home</a></li>
+                <li><a href="#zyAddFeedbackPage" data-icon="plus" data-theme="a">Add</a></li>
+                <li><a href="#zyViewFeedbackPage" data-icon="grid" data-theme="a" class="ui-btn-active ui-state-persist">Reviews</a></li>
+                <li><a href="#zySettingsPage" data-icon="gear" data-theme="a">Settings</a></li>
+            </ul>
+        </div>
+    </header>
+    <section data-role="content">
+        <ul id="zyFeedbackList" data-role="listview" class="ui-listview-inset" data-icon="false">
+            <li>
+                <a href="#zyEditFeedbackPage">
+                    <h3>Business Name: My Pig Shop</h3>
+                    <p>Reviewer Email: zyPigShop@shop.com</p>
+                    <p>Comments: Many pigs in a row.</p>
+                    <p>Overall Rating: 100%</p>
+                </a>
+            </li>
+            <li>
+                <a href="#zyEditFeedbackPage">
+                    <h3>Business Name: My Dog Shop</h3>
+                    <p>Reviewer Email: zyDogShop@shop.com</p>
+                    <p>Comments: Many dogs in a row.</p>
+                    <p>Overall Rating: 77%</p>
+                </a>
+            </li>
+        </ul>
+    </section>
+    <footer data-role="footer" data-theme="b" data-position="fixed">
+        <h1>&copy; 2019 Zixuan Yang</h1>
+    </footer>
+</div>
+
+<!--This is modify feedback page-->
+<div id="zyEditFeedbackPage" data-role="page">
+    <header data-role="header" data-theme="b" data-position="fixed">
+        <h1>Modify Feedback</h1>
+        <div data-role="navbar" data-iconpos="top">
+            <ul>
+                <li><a href="#zyHomePage" data-icon="home" data-theme="a">Home</a></li>
+                <li><a href="#zyAddFeedbackPage" data-icon="plus" data-theme="a">Add</a></li>
+                <li><a href="#zyViewFeedbackPage" data-icon="grid" data-theme="a" class="ui-btn-active ui-state-persist">Reviews</a></li>
+                <li><a href="#zySettingsPage" data-icon="gear" data-theme="a">Settings</a></li>
+            </ul>
+        </div>
+    </header>
+    <section data-role="content">
+        <form id="zyModifyForm" name="zyAddForm">
+            <label for="zyTxtBusinessNameModify">Business Name:</label>
+            <input type="text" id="zyTxtBusinessNameModify" name="zyTxtBusinessNameModify" value="My Pig Shop">
+
+            <label for="zyTxtEmailModify">Reviewer Email:</label>
+            <input type="text" id="zyTxtEmailModify" name="zyTxtEmailModify" value="zyPigShop@shop.com">
+
+            <label for="zyTxtAreaCommentsModify">Reviewer Comments</label>
+            <textarea name="zyTxtAreaCommentsModify" id="zyTxtAreaCommentsModify">Many pigs in a row.</textarea>
+
+            <label for="zyNumberRateModify">Overall Ratings(1-100):</label>
+            <input type="number" id="zyNumberRateModify" name="zyNumberRateModify" min="1" max="100" value="100">
+
+            <div data-role="controlgroup" data-type="horizontal">
+                <button type="button" id="zyBtnCancel" style="background-color: yellow; color: black">Cancel</button>
+                <button type="button" id="zyBtnDelete" style="background-color: black; color: white;">Delete</button>
+                <button type="button" id="zyBtnUpdate" style="background-color: blue; color: white">Update</button>
+            </div>
+        </form>
+    </section>
+    <footer data-role="footer" data-theme="b" data-position="fixed">
+        <h1>&copy; 2019 Zixuan Yang</h1>
+    </footer>
+</div>
+
+<!--This is settings page-->
+<div id="zySettingsPage" data-role="page">
+    <header data-role="header" data-theme="b" data-position="fixed">
+        <h1>Settings</h1>
+        <div data-role="navbar" data-iconpos="top">
+            <ul>
+                <li><a href="#zyHomePage" data-icon="home" data-theme="a">Home</a></li>
+                <li><a href="#zyAddFeedbackPage" data-icon="plus" data-theme="a">Add</a></li>
+                <li><a href="#zyViewFeedbackPage" data-icon="grid" data-theme="a">Reviews</a></li>
+                <li><a href="#zySettingsPage" data-icon="gear" data-theme="a" class="ui-btn-active ui-state-persist">Settings</a></li>
+            </ul>
+        </div>
+    </header>
+    <section data-role="content">
+        <label for="zyTxtDefaultEmail">Default reviewer Email:</label>
+        <input type="text" id="zyTxtDefaultEmail" name="zyTxtDefaultEmail">
+
+        <button type="button" id="zyBtnSaveDefaults" style="background-color: blue; color: white">Save Defaults</button>
+        <button type="button" id="zyBtnClear" style="background-color: black; color: white;">Clear Database</button>
+    </section>
+    <footer data-role="footer" data-theme="b" data-position="fixed">
+        <h1>&copy; 2019 Zixuan Yang</h1>
+    </footer>
+</div>
+
+
+</body>
+</html>
